@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html ng-app="listApp">
+<head>
+  <title>ng-repeat Example</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  <script>
+    angular.module('listApp', [])
+      .controller('ListController', function($scope) {
+        $scope.fruits = ['Apple', 'Banana', 'Mango', 'Orange'];
+      });
+  </script>
+</head>
+<body ng-controller="ListController">
+
+<h2>Fruit List</h2>
+<ul>
+  <li ng-repeat="fruit in fruits">{{fruit}}</li>
+</ul>
+
+</body>
+</html>
+
+
